@@ -1,0 +1,55 @@
+﻿@page "/"
+
+@inject NavigationManager Navigation
+
+<PageTitle>Home</PageTitle>
+
+<MudCard>
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6" Class="d-flex justify-center">Welcome to Weather App</MudText>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardContent Class="d-flex flex-column align-center">
+        <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="NavigateToSignup" Class="mb-2">Sign Up</MudButton>
+        <MudButton Variant="Variant.Outlined" Color="Color.Primary" @onclick="NavigateToSignin">Sign In</MudButton>
+    </MudCardContent>
+</MudCard>
+
+
+
+@code {
+    private void NavigateToSignup()
+
+
+
+    {
+
+
+
+        Navigation.NavigateTo("/Signup");
+
+
+
+    }
+
+
+
+
+
+
+
+    private void NavigateToSignin()
+
+
+
+    {
+
+
+
+        Navigation.NavigateTo("/Signin");
+
+
+
+    }
+}
